@@ -175,7 +175,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="1、创建-SSH-密钥"><a href="#1、创建-SSH-密钥" class="headerlink" title="1、创建 SSH 密钥"></a>1、创建 SSH 密钥</h1><p>登陆腾讯云账号，进入云服务器管理后台，左侧找到 SSH 密钥栏目，右侧点击创建密钥，弹窗默认创建新密钥对，下面输入密钥名称，案例中老魏用域名做密钥名字，确定。<br><img src="/Volumes/data/project/blob/zachariah99.github.io/blog/source/_posts/article_img/%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%9B%E5%BB%BA%E5%AF%86%E9%92%A5%E5%AF%B9%E5%8F%8A-SSH-%E8%BF%9E%E6%8E%A5-1.jpg"><br>#2、绑定密钥到云服务器<br>勾选刚才创建的 SSH 密钥，点击上面的绑定云主机，弹窗中要先找到你云主机的地域，然后就能看到该地域下的云主机，要求关机状态才能加载并选择，然后和 SSH 密钥关联起来，确定，绑定成功。<br><img src="/Volumes/data/project/blob/zachariah99.github.io/blog/source/_posts/article_img/%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%9B%E5%BB%BA%E5%AF%86%E9%92%A5%E5%AF%B9%E5%8F%8A-SSH-%E8%BF%9E%E6%8E%A5-2.jpg"><br>#3、SSH 密钥登陆腾讯云主机<br>现在我们打开 SSH 软件，老魏用的是 Xshell6.0，打开 SSH 连接属性，方法改成 Public Key，用户密钥右侧点击浏览，弹窗中选择导入，把刚才下载的私钥导入进来。因为阿里云创建的私钥使用未加密的 PEM（Privacy-enhanced Electronic Mail） 编码的 PKCS#8 格式，我们不用输入密码直接点击确定，最后点击连接。<br><img src="/Volumes/data/project/blob/zachariah99.github.io/blog/source/_posts/article_img/%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%9B%E5%BB%BA%E5%AF%86%E9%92%A5%E5%AF%B9%E5%8F%8A-SSH-%E8%BF%9E%E6%8E%A5-3.jpg"><br>#4、修改ssh远程连接端口<br><code>vim /etc/ssh/sshd_config</code><br>将#Port 22注释放开并修改为其他端口，进入命令行模式:wq退出，执行service sshd restart即可。修改后可以重新配置腾讯云安全组的放行端口即可<br>#5、如果想禁用密码登录<br>对 ssh 进行配置<br><code>vim /etc/ssh/sshd_config</code><br><code>#禁用密码登录 PasswordAuthentication no</code><br>重启 ssh<br><code>service sshd restart</code><br>6、    如果登录后出现一下提示可以这样设置<br><code>WARNING! The remote SSH rejected X11 forwarding</code><br>配置Xshell 6连接属性，如下图，取消勾取即可：<br><img src="/Volumes/data/project/blob/zachariah99.github.io/blog/source/_posts/article_img/%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%9B%E5%BB%BA%E5%AF%86%E9%92%A5%E5%AF%B9%E5%8F%8A-SSH-%E8%BF%9E%E6%8E%A5-4.png"></p>
+        <h1 id="1、创建-SSH-密钥"><a href="#1、创建-SSH-密钥" class="headerlink" title="1、创建 SSH 密钥"></a>1、创建 SSH 密钥</h1><p>登陆腾讯云账号，进入云服务器管理后台，左侧找到 SSH 密钥栏目，右侧点击创建密钥，弹窗默认创建新密钥对，下面输入密钥名称，案例中老魏用域名做密钥名字，确定。<br><img src="/Volumes/data/project/blob/zachariah99.github.io/blog/source/images/%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%9B%E5%BB%BA%E5%AF%86%E9%92%A5%E5%AF%B9%E5%8F%8A-SSH-%E8%BF%9E%E6%8E%A5-1.jpg"><br>#2、绑定密钥到云服务器<br>勾选刚才创建的 SSH 密钥，点击上面的绑定云主机，弹窗中要先找到你云主机的地域，然后就能看到该地域下的云主机，要求关机状态才能加载并选择，然后和 SSH 密钥关联起来，确定，绑定成功。<br><img src="/Volumes/data/project/blob/zachariah99.github.io/blog/source/images/%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%9B%E5%BB%BA%E5%AF%86%E9%92%A5%E5%AF%B9%E5%8F%8A-SSH-%E8%BF%9E%E6%8E%A5-2.jpg"><br>#3、SSH 密钥登陆腾讯云主机<br>现在我们打开 SSH 软件，老魏用的是 Xshell6.0，打开 SSH 连接属性，方法改成 Public Key，用户密钥右侧点击浏览，弹窗中选择导入，把刚才下载的私钥导入进来。因为阿里云创建的私钥使用未加密的 PEM（Privacy-enhanced Electronic Mail） 编码的 PKCS#8 格式，我们不用输入密码直接点击确定，最后点击连接。<br><img src="/Volumes/data/project/blob/zachariah99.github.io/blog/source/images/%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%9B%E5%BB%BA%E5%AF%86%E9%92%A5%E5%AF%B9%E5%8F%8A-SSH-%E8%BF%9E%E6%8E%A5-3.jpg"><br>#4、修改ssh远程连接端口<br><code>vim /etc/ssh/sshd_config</code><br>将#Port 22注释放开并修改为其他端口，进入命令行模式:wq退出，执行service sshd restart即可。修改后可以重新配置腾讯云安全组的放行端口即可<br>#5、如果想禁用密码登录<br>对 ssh 进行配置<br><code>vim /etc/ssh/sshd_config</code><br><code>#禁用密码登录 PasswordAuthentication no</code><br>重启 ssh<br><code>service sshd restart</code><br>6、    如果登录后出现一下提示可以这样设置<br><code>WARNING! The remote SSH rejected X11 forwarding</code><br>配置Xshell 6连接属性，如下图，取消勾取即可：<br><img src="/Volumes/data/project/blob/zachariah99.github.io/blog/source/images/%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%9B%E5%BB%BA%E5%AF%86%E9%92%A5%E5%AF%B9%E5%8F%8A-SSH-%E8%BF%9E%E6%8E%A5-4.png"></p>
 
       
 
@@ -208,81 +208,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2024/05/11/%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%9B%E5%BB%BA%E5%AF%86%E9%92%A5%E5%AF%B9%E5%8F%8A-SSH-%E8%BF%9E%E6%8E%A5/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/05/11/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2024/05/11/hello-world/" class="archive-article-date">
-  	<time datetime="2024-05-11T03:50:59.683Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-05-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2024/05/11/hello-world/">展开全文 >></a>
         </p>
       
 
