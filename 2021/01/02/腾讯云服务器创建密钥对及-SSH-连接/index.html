@@ -6,18 +6,28 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://zachariah99.github.io">
-  <title>庄严的博客</title>
+  <title>腾讯云服务器创建密钥对及 SSH 连接 | 庄严的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="记录自己的学习路线和学习内容">
-<meta property="og:type" content="website">
-<meta property="og:title" content="庄严的博客">
-<meta property="og:url" content="https://zachariah99.github.io/index.html">
+  <meta name="description" content="腾讯云服务器创建密钥对及 SSH 连接">
+<meta property="og:type" content="article">
+<meta property="og:title" content="腾讯云服务器创建密钥对及 SSH 连接">
+<meta property="og:url" content="https://zachariah99.github.io/2021/01/02/%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%9B%E5%BB%BA%E5%AF%86%E9%92%A5%E5%AF%B9%E5%8F%8A-SSH-%E8%BF%9E%E6%8E%A5/index.html">
 <meta property="og:site_name" content="庄严的博客">
-<meta property="og:description" content="记录自己的学习路线和学习内容">
+<meta property="og:description" content="腾讯云服务器创建密钥对及 SSH 连接">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="file:///Volumes/data/project/blob/zachariah99.github.io/blog/source/images/%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%9B%E5%BB%BA%E5%AF%86%E9%92%A5%E5%AF%B9%E5%8F%8A-SSH-%E8%BF%9E%E6%8E%A5/1.jpg">
+<meta property="og:image" content="https://zachariah99.github.io/Volumes/data/project/blob/zachariah99.github.io/blog/source/images/%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%9B%E5%BB%BA%E5%AF%86%E9%92%A5%E5%AF%B9%E5%8F%8A-SSH-%E8%BF%9E%E6%8E%A5/2.jpg">
+<meta property="og:image" content="https://zachariah99.github.io/Volumes/data/project/blob/zachariah99.github.io/blog/source/images/%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%9B%E5%BB%BA%E5%AF%86%E9%92%A5%E5%AF%B9%E5%8F%8A-SSH-%E8%BF%9E%E6%8E%A5/3.jpg">
+<meta property="og:image" content="file:///Volumes/data/project/blob/zachariah99.github.io/blog/source/images/%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%9B%E5%BB%BA%E5%AF%86%E9%92%A5%E5%AF%B9%E5%8F%8A-SSH-%E8%BF%9E%E6%8E%A5/4.png">
+<meta property="article:published_time" content="2021-01-01T23:23:00.000Z">
+<meta property="article:modified_time" content="2024-05-11T10:33:25.559Z">
 <meta property="article:author" content="庄严">
-<meta property="article:tag" content="庄严">
+<meta property="article:tag" content="随笔">
+<meta property="article:tag" content="运维">
+<meta property="article:tag" content="云服务器">
+<meta property="article:tag" content="centos">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="file:///Volumes/data/project/blob/zachariah99.github.io/blog/source/images/%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%9B%E5%BB%BA%E5%AF%86%E9%92%A5%E5%AF%B9%E5%8F%8A-SSH-%E8%BF%9E%E6%8E%A5/1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="庄严的博客" type="application/atom+xml">
   
@@ -133,101 +143,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-finalshell离线激活" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-腾讯云服务器创建密钥对及-SSH-连接" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/04/06/finalshell%E7%A6%BB%E7%BA%BF%E6%BF%80%E6%B4%BB/">finalshell离线激活</a>
-    </h1>
-  
-
-        
-        <a href="/2022/04/06/finalshell%E7%A6%BB%E7%BA%BF%E6%BF%80%E6%B4%BB/" class="archive-article-date">
-  	<time datetime="2022-04-06T07:05:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-04-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="finalshell离线激活"><a href="#finalshell离线激活" class="headerlink" title="finalshell离线激活"></a>finalshell离线激活</h1><p>下载并安装finalshell<br>安装完成后点击激活<br>随便填写一个用户名密码（记住）——离线激活<br>#激活程序</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import java.io.IOException;</span><br><span class="line">import java.security.MessageDigest;</span><br><span class="line">import java.security.NoSuchAlgorithmException;</span><br><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line">public class FinalShell &#123;</span><br><span class="line">    public static void main(String[] args) throws NoSuchAlgorithmException, IOException &#123;</span><br><span class="line">        System.out.print(&quot;请输入FinalShell的离线机器码：&quot;);</span><br><span class="line">        Scanner reader = new Scanner(System.in);</span><br><span class="line">        String machineCode = reader.nextLine();</span><br><span class="line">        generateKey(machineCode);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void generateKey(String hardwareId) throws NoSuchAlgorithmException &#123;</span><br><span class="line">        String proKey = transform(61305 + hardwareId + 8552);</span><br><span class="line">        String pfKey = transform(2356 + hardwareId + 13593);</span><br><span class="line">        System.out.println(&quot;请将此行复制到离线激活中：&quot;+proKey);</span><br><span class="line">        System.out.println(pfKey);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static String transform(String str) throws NoSuchAlgorithmException &#123;</span><br><span class="line">        String md5 = hashMD5(str);</span><br><span class="line">        return hashMD5(str).substring(8, 24);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static String hashMD5(String str) throws NoSuchAlgorithmException &#123;</span><br><span class="line">        MessageDigest digest = MessageDigest.getInstance(&quot;MD5&quot;);</span><br><span class="line">        byte[] hashed = digest.digest(str.getBytes());</span><br><span class="line">        StringBuilder sb = new StringBuilder();</span><br><span class="line">        for (byte b : hashed) &#123;</span><br><span class="line">            int len = b &amp; 0xFF;</span><br><span class="line">            if (len &lt; 16) &#123;</span><br><span class="line">                sb.append(&quot;0&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">            sb.append(Integer.toHexString(len));</span><br><span class="line">        &#125;</span><br><span class="line">        return sb.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>运行程序输入刚刚生成的机器码回车复制激活码粘贴激活即可</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">finalshell</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">离线激活</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/04/06/finalshell%E7%A6%BB%E7%BA%BF%E6%BF%80%E6%B4%BB/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-腾讯云服务器创建密钥对及-SSH-连接" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/01/02/%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%9B%E5%BB%BA%E5%AF%86%E9%92%A5%E5%AF%B9%E5%8F%8A-SSH-%E8%BF%9E%E6%8E%A5/">腾讯云服务器创建密钥对及 SSH 连接</a>
+    <h1 class="article-title" itemprop="name">
+      腾讯云服务器创建密钥对及 SSH 连接
     </h1>
   
 
@@ -254,6 +177,27 @@
 
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -285,16 +229,28 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/01/02/%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%9B%E5%BB%BA%E5%AF%86%E9%92%A5%E5%AF%B9%E5%8F%8A-SSH-%E8%BF%9E%E6%8E%A5/">展开全文 >></a>
-        </p>
-      
 
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2022/04/06/finalshell%E7%A6%BB%E7%BA%BF%E6%BF%80%E6%B4%BB/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          finalshell离线激活
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -309,13 +265,32 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1%E3%80%81%E5%88%9B%E5%BB%BA-SSH-%E5%AF%86%E9%92%A5"><span class="toc-number">1.</span> <span class="toc-text">1、创建 SSH 密钥</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2%E3%80%81%E7%BB%91%E5%AE%9A%E5%AF%86%E9%92%A5%E5%88%B0%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-number">2.</span> <span class="toc-text">2、绑定密钥到云服务器</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3%E3%80%81SSH-%E5%AF%86%E9%92%A5%E7%99%BB%E9%99%86%E8%85%BE%E8%AE%AF%E4%BA%91%E4%B8%BB%E6%9C%BA"><span class="toc-number">3.</span> <span class="toc-text">3、SSH 密钥登陆腾讯云主机</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4%E3%80%81%E4%BF%AE%E6%94%B9ssh%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E7%AB%AF%E5%8F%A3"><span class="toc-number">4.</span> <span class="toc-text">4、修改ssh远程连接端口</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5%E3%80%81%E5%A6%82%E6%9E%9C%E6%83%B3%E7%A6%81%E7%94%A8%E5%AF%86%E7%A0%81%E7%99%BB%E5%BD%95"><span class="toc-number">5.</span> <span class="toc-text">5、如果想禁用密码登录</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6%E3%80%81%E5%A6%82%E6%9E%9C%E7%99%BB%E5%BD%95%E5%90%8E%E5%87%BA%E7%8E%B0%E4%B8%80%E4%B8%8B%E6%8F%90%E7%A4%BA%E5%8F%AF%E4%BB%A5%E8%BF%99%E6%A0%B7%E8%AE%BE%E7%BD%AE"><span class="toc-number">6.</span> <span class="toc-text">6、如果登录后出现一下提示可以这样设置</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
 
 
+  
+  
+  
 
   
+
+  
+
   
 
 
@@ -338,8 +313,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
