@@ -6,18 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://zachariah99.github.io">
-  <title>Archives: 2024 | 庄严的博客</title>
+  <title>腾讯云服务器创建密钥对及 SSH 连接 | 庄严的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="记录自己的学习路线和学习内容">
-<meta property="og:type" content="website">
-<meta property="og:title" content="庄严的博客">
-<meta property="og:url" content="https://zachariah99.github.io/archives/2024/index.html">
+  <meta name="description" content="腾讯云服务器创建密钥对及 SSH 连接">
+<meta property="og:type" content="article">
+<meta property="og:title" content="腾讯云服务器创建密钥对及 SSH 连接">
+<meta property="og:url" content="https://zachariah99.github.io/2024/05/11/%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%9B%E5%BB%BA%E5%AF%86%E9%92%A5%E5%AF%B9%E5%8F%8A-SSH-%E8%BF%9E%E6%8E%A5/index.html">
 <meta property="og:site_name" content="庄严的博客">
-<meta property="og:description" content="记录自己的学习路线和学习内容">
+<meta property="og:description" content="腾讯云服务器创建密钥对及 SSH 连接">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://zachariah99.github.io/Volumes/data/project/blob/zachariah99.github.io/blog/source/_posts/article_img/%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%9B%E5%BB%BA%E5%AF%86%E9%92%A5%E5%AF%B9%E5%8F%8A-SSH-%E8%BF%9E%E6%8E%A5-1.jpg">
+<meta property="og:image" content="https://zachariah99.github.io/Volumes/data/project/blob/zachariah99.github.io/blog/source/_posts/article_img/%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%9B%E5%BB%BA%E5%AF%86%E9%92%A5%E5%AF%B9%E5%8F%8A-SSH-%E8%BF%9E%E6%8E%A5-2.jpg">
+<meta property="og:image" content="https://zachariah99.github.io/Volumes/data/project/blob/zachariah99.github.io/blog/source/_posts/article_img/%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%9B%E5%BB%BA%E5%AF%86%E9%92%A5%E5%AF%B9%E5%8F%8A-SSH-%E8%BF%9E%E6%8E%A5-3.jpg">
+<meta property="og:image" content="https://zachariah99.github.io/Volumes/data/project/blob/zachariah99.github.io/blog/source/_posts/article_img/%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%9B%E5%BB%BA%E5%AF%86%E9%92%A5%E5%AF%B9%E5%8F%8A-SSH-%E8%BF%9E%E6%8E%A5-4.png">
+<meta property="article:published_time" content="2024-05-11T08:17:22.000Z">
+<meta property="article:modified_time" content="2024-05-11T08:32:17.072Z">
 <meta property="article:author" content="庄严">
-<meta property="article:tag" content="庄严">
+<meta property="article:tag" content="运维">
+<meta property="article:tag" content="云服务器">
+<meta property="article:tag" content="centos">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://zachariah99.github.io/Volumes/data/project/blob/zachariah99.github.io/blog/source/_posts/article_img/%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%9B%E5%BB%BA%E5%AF%86%E9%92%A5%E5%AF%B9%E5%8F%8A-SSH-%E8%BF%9E%E6%8E%A5-1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="庄严的博客" type="application/atom+xml">
   
@@ -153,36 +162,56 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-腾讯云服务器创建密钥对及-SSH-连接" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2024" class="archive-year">2024</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2024/05/11/%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%9B%E5%BB%BA%E5%AF%86%E9%92%A5%E5%AF%B9%E5%8F%8A-SSH-%E8%BF%9E%E6%8E%A5/" class="archive-article-date">
-  	<time datetime="2024-05-11T08:17:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-05-11</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/05/11/%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%9B%E5%BB%BA%E5%AF%86%E9%92%A5%E5%AF%B9%E5%8F%8A-SSH-%E8%BF%9E%E6%8E%A5/">腾讯云服务器创建密钥对及 SSH 连接</a>
+    <h1 class="article-title" itemprop="name">
+      腾讯云服务器创建密钥对及 SSH 连接
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2024/05/11/%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%9B%E5%BB%BA%E5%AF%86%E9%92%A5%E5%AF%B9%E5%8F%8A-SSH-%E8%BF%9E%E6%8E%A5/" class="archive-article-date">
+  	<time datetime="2024-05-11T08:17:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-05-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="1、创建-SSH-密钥"><a href="#1、创建-SSH-密钥" class="headerlink" title="1、创建 SSH 密钥"></a>1、创建 SSH 密钥</h1><p>登陆腾讯云账号，进入云服务器管理后台，左侧找到 SSH 密钥栏目，右侧点击创建密钥，弹窗默认创建新密钥对，下面输入密钥名称，案例中老魏用域名做密钥名字，确定。<br><img src="/Volumes/data/project/blob/zachariah99.github.io/blog/source/_posts/article_img/%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%9B%E5%BB%BA%E5%AF%86%E9%92%A5%E5%AF%B9%E5%8F%8A-SSH-%E8%BF%9E%E6%8E%A5-1.jpg"><br>#2、绑定密钥到云服务器<br>勾选刚才创建的 SSH 密钥，点击上面的绑定云主机，弹窗中要先找到你云主机的地域，然后就能看到该地域下的云主机，要求关机状态才能加载并选择，然后和 SSH 密钥关联起来，确定，绑定成功。<br><img src="/Volumes/data/project/blob/zachariah99.github.io/blog/source/_posts/article_img/%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%9B%E5%BB%BA%E5%AF%86%E9%92%A5%E5%AF%B9%E5%8F%8A-SSH-%E8%BF%9E%E6%8E%A5-2.jpg"><br>#3、SSH 密钥登陆腾讯云主机<br>现在我们打开 SSH 软件，老魏用的是 Xshell6.0，打开 SSH 连接属性，方法改成 Public Key，用户密钥右侧点击浏览，弹窗中选择导入，把刚才下载的私钥导入进来。因为阿里云创建的私钥使用未加密的 PEM（Privacy-enhanced Electronic Mail） 编码的 PKCS#8 格式，我们不用输入密码直接点击确定，最后点击连接。<br><img src="/Volumes/data/project/blob/zachariah99.github.io/blog/source/_posts/article_img/%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%9B%E5%BB%BA%E5%AF%86%E9%92%A5%E5%AF%B9%E5%8F%8A-SSH-%E8%BF%9E%E6%8E%A5-3.jpg"><br>#4、修改ssh远程连接端口<br><code>vim /etc/ssh/sshd_config</code><br>将#Port 22注释放开并修改为其他端口，进入命令行模式:wq退出，执行service sshd restart即可。修改后可以重新配置腾讯云安全组的放行端口即可<br>#5、如果想禁用密码登录<br>对 ssh 进行配置<br><code>vim /etc/ssh/sshd_config</code><br><code>#禁用密码登录 PasswordAuthentication no</code><br>重启 ssh<br><code>service sshd restart</code><br>6、    如果登录后出现一下提示可以这样设置<br><code>WARNING! The remote SSH rejected X11 forwarding</code><br>配置Xshell 6连接属性，如下图，取消勾取即可：<br><img src="/Volumes/data/project/blob/zachariah99.github.io/blog/source/_posts/article_img/%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%9B%E5%BB%BA%E5%AF%86%E9%92%A5%E5%AF%B9%E5%8F%8A-SSH-%E8%BF%9E%E6%8E%A5-4.png"></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -202,46 +231,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://zachariah99.github.io/2024/05/11/%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%9B%E5%BB%BA%E5%AF%86%E9%92%A5%E5%AF%B9%E5%8F%8A-SSH-%E8%BF%9E%E6%8E%A5/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2024/05/11/hello-world/" class="archive-article-date">
-  	<time datetime="2024-05-11T03:50:59.683Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-05-11</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2024/05/11/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/05/11/hello-world/">Hello World</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -264,8 +353,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
